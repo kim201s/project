@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block swiper %}
+<main>
+
+
+    <div class="content">
+        <div class="container">
+            <div class="my_card_orders">
+                <h3>Моя Корзина</h3>
+            </div>
+
+            <div class="total_products_price">
+                <p class="total_products_cart"><span>Общее количество: </span> 2</p>
+                <p class="total_price_cart"><span>Общая стоимость: </span> 600</p>
+            </div>
+            <ul class="list_card_orders ">
+
+                <li class="order  order_cart">
+                    <div class="info">
+                        <a href="#">
+                            <img class="order_cart_img" src="../image/goods/Redmi.png" alt="">
+                        </a>
+                        <div class="info_order">
+                            <h4 class="product_title">Смартфон Samsung GalaxyA52 White 128Gb</h4>
+                            <div class="color_quantity">
+                                <div class="color"><p>Цвет:</p> <span>Белый</span></div>
+
+                                <div class="quantity"><p>Кол-во:</p> <span>2</span>
+
+                                    <div class="quantity_arrow">
+
+                                        <a href="#">
+                                            <img data-product="id" data-action="add" class="chg-quantity update-cart"
+                                                 src="../image/icons/arrow-up.png" alt="">
+                                        </a>
+
+                                        <a href="#">
+                                            <img data-product="id" data-action="remove" class="chg-quantity update-cart"
+                                                 src="../image/icons/arrow-down.png" alt="">
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price_cart">
+                        <p class="product_price_title">Стоимость</p>
+                        <p class="product_price">300 000</p>
+                    </div>
+
+                    <div class="data_add">
+                        <p class="product_data">Дата добавления</p>
+                        <div class="data"><img src="../image/icons/clarity_date-line.svg" alt="">
+                            <span>12.06.2023</span>
+                        </div>
+                    </div>
+                    <div class="price_cart">
+                        <p class="product_price_title">Итого</p>
+                        <p class="product_price">600 000</p>
+                    </div>
+
+                </li>
+
+            </ul>
+
+            <div class="order_btns">
+                <a href="{% url 'clear_cart' %}" class="btn_order">Очистить корзину</a>
+                <a href="{% url 'checkout' %}" class="btn_order">Оформить заказ</a>
+            </div>
+
+        </div>
+    </div>
+
+</main>
+{% endblock swiper %}
+
+
+{% block main %}
+
+{% endblock main %}

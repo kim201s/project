@@ -1,0 +1,78 @@
+{% load static %}
+
+<main>
+    <div class="content_user">
+      <div class="user container">
+        <h3 class="user_room">Личный кабинет</h3>
+        <div class="user_block">
+          <div class="user_img">
+            <img class="user_img-img" src="../image/goods/user.jpg" alt="">
+            <div class="user_name">
+            <p>{{ request.user.username }}</p>
+          </div>
+          </div>
+          <div class="user_info">
+            <h2 class="user_title">Личные данные</h2>
+            <ul class="lis__user_info">
+
+              <li class="list_user"><p>Имя:</p> <span>Александр</span></li>
+              <li class="list_user"><p>Фамилия:</p> <span>Мухаммавдиев</span></li>
+              <li class="list_user"><p>Телефон:</p> <span>+998 93 582 47 72</span></li>
+              <li class="list_user"><p>E-mail:</p> <span>kazus92@list.ru</span></li>
+
+            </ul>
+          </div>
+        </div>
+        <p>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Кнопка с data-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    <form method="post">
+      {% csrf_token %}
+      {{ profile_form }}
+
+    </form>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <div class="content_order">
+      <div class="my_orders">
+        <h3>Мои заказы</h3> <img src="../image/icons/errow_right.svg" alt="" class="errow_down">
+      </div>
+
+      <ul class="list_orders ">
+        <li class="order">
+          <img src="../image/goods/Rectangle 356 (2).png" alt="">
+          <div class="info_order">
+            <h4 class="product_title">Смартфон Samsung GalaxyA52 White 128Gb</h4>
+            <div class="color_quantity">
+              <div class="color"><p>Цвет:</p> <span>Белый</span></div>
+              <div class="quantity"><p>Кол-во:</p> <span>1</span></div>
+            </div>
+          </div>
+          <p class="product_price">3 864 000 сум</p>
+          <div class="data"><img src="../image/icons/clarity_date-line.svg" alt=""> <span>03.04.2023</span></div>
+        </li>
+
+      </ul>
+
+
+    </div>
+
+    <div class="content_connect">
+      <p class="content_top_text">Привязка к аккаунтам соцсетей</p>
+      <p class="content_midle_text">Вы можете связать свой профиль с профилями в социальных сетях и сервисах:</p>
+      <div class="list_mail">
+        <img src="../image/icons/tg.svg" alt="">
+        <img src="../image/icons/insta.svg" alt="">
+        <img src="../image/icons/fb.svg" alt="">
+        <img src="../image/icons/google.svg" alt="">
+      </div>
+
+    </div>
+  </main>

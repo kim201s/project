@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block swiper %}
+{% include 'digitalstore/components/_filters.html' %}
+{% endblock swiper %}
+
+
+{% block main %}
+
+<main>
+    <div class="content">
+        <div class="container">
+            {% if products %}
+            <h2 class="content__title">Хиты продаж</h2>
+            <div class="content__cards">
+
+                {% for product in products %}
+                {% include 'digitalstore/components/_card.html' %}
+                {% endfor %}
+            </div>
+            {% else %}
+            <h3 class="not_found" style="
+    text-align: center;
+    color: #999999;
+    font-size: 40px;
+">По вашему запросу нифига не найдено</h3>
+            {% endif %}
+
+                {% include 'digitalstore/components/_pagination.html' %}
+
+        </div>
+    </div>
+</main>
+
+{% endblock main %}
